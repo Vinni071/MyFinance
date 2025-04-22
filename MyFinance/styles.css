@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sign-in {
+    background: none;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.register {
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: #eaeaea;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.light-btn {
+    background: #ddd;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.dark-btn {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.accounts {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.dropdown {
+    margin: 10px 0;
+}
+
+.dropdown-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background: #f0f0f0;
+    border: none;
+    cursor: pointer;
+}
+
+.add-btn {
+    background: none;
+    border: 2px solid #333;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+footer {
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.resources h3 {
+    margin-bottom: 10px;
+}
+
+.resources ul {
+    list-style: none;
+}
+
+.resources ul li a {
+    text-decoration: none;
+    color: #333;
+}
