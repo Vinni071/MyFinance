@@ -32,7 +32,46 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: #333;
+    top: 7px;
 }
+
+a {
+  text-decoration: none;
+  position: relative;
+  transition: color 0.5s ease;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, black, transparent);
+  background-size: 300% 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+a:hover {
+  color: #;
+}
+
+a:hover::after {
+  opacity: 1;
+  animation: shimmer111 2s linear infinite !important;
+}
+
+@keyframes shimmer111 {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 
 .sign-in {
     background: none;
@@ -46,6 +85,18 @@ nav ul li a {
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+.sign-in:hover{
+    padding: 7px 12px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.register:hover {
+    padding: 7px 12px;
+    transition: 0.4s;
+    cursor: pointer;
 }
 
 .hero {
@@ -67,12 +118,22 @@ nav ul li a {
     margin-top: 20px;
 }
 
+.dark-btn:hover{
+    padding: 15px;
+    transition: 0.4s;
+}
+
+.light-btn:hover{
+    padding: 15px;
+    transition: 0.4s;
+}
 .light-btn {
     background: #ddd;
     border: none;
     padding: 10px 20px;
     margin-right: 10px;
     cursor: pointer;
+    border-radius: 6px;
 }
 
 .dark-btn {
@@ -81,6 +142,7 @@ nav ul li a {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    border-radius: 6px;
 }
 
 .accounts {
@@ -114,16 +176,29 @@ nav ul li a {
     background: #f0f0f0;
     border: none;
     cursor: pointer;
+    border-radius: 8px;
+}
+
+.dropdown-btn:hover {
+    padding: 14px;
+    transition: 0.4s;
 }
 
 .add-btn {
-    background: none;
-    border: 2px solid #333;
-    width: 40px;
-    height: 40px;
+    background: #f0f0f0;
+    border: none;
+    padding: 6px;
+    width: 100%;
     font-size: 20px;
     cursor: pointer;
     margin-top: 10px;
+    border-radius: 8px;
+}
+
+.add-btn:hover {
+    padding: 12px;
+    transition: 0.4s;
+
 }
 
 footer {
@@ -134,9 +209,19 @@ footer {
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.social-icons a {
-    margin-right: 10px;
+.social-icons  {
+    margin-right: 20px;
     text-decoration: none;
+}
+
+.x, .insta, .linker {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.x:hover, .insta:hover, .linker:hover {
+    font-size: 26px;
+    transition: 0.4s;
 }
 
 .resources h3 {
