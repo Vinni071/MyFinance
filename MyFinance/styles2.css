@@ -79,69 +79,6 @@ a:hover::after {
     }
 }
 
-.sign-in {
-    background: #ddd;
-    color: #333;
-    padding: 8px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.register {
-    background: #333;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.sign-in:hover {
-    background: #ccc;
-    color: #000;
-    transform: translateY(-2px);
-}
-
-.register:hover {
-    background: #555;
-    color: #fff;
-    transform: translateY(-2px);
-}
-
-.hero {
-    text-align: center;
-    padding: 50px;
-    background: #eaeaea;
-}
-
-.hero h1 {
-    font-size: 3.5em;
-    color: #333;
-}
-
-.hero p {
-    margin: 10px 0;
-    font-size: 1.2em;
-    color: #555;
-}
-
-.buttons {
-    margin-top: 20px;
-}
-
-.light-btn {
-    background: #ddd;
-    border: 1px solid #ccc;
-    color: #333;
-    padding: 12px 25px;
-    margin-right: 10px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
 .dark-btn {
     background: #333;
     color: white;
@@ -150,12 +87,6 @@ a:hover::after {
     cursor: pointer;
     border-radius: 8px;
     transition: all 0.3s ease;
-}
-
-.light-btn:hover {
-    background: #ccc;
-    padding: 15px;
-    transition: 0.4s;
 }
 
 .dark-btn:hover {
@@ -200,76 +131,41 @@ a:hover::after {
     overflow: hidden;
 }
 
-.dropdown-btn {
-    margin: 8px 0;
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #f0f0f0;
-    color: #333;
-    font-size: 14px;
+.dropdown input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: padding 0.3s, border-color 0.3s;
+}
+
+.dropdown input:focus {
+    padding: 14px;
+    border-color: #000;
     outline: none;
-    text-align: left;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
 
-.dropdown-btn:hover {
-    background-color: #e0e0e0;
-    transform: translateX(5px);
-}
-
-.add-btn {
-    margin-top: 15px;
-    width: 100%;
-    padding: 12px;
-    border: none;
+.loginBtn {
+    padding: 10px;
+    margin: 10px;
     border-radius: 8px;
-    background-color: #333;
+    border: none;
+    background-color: #222;
     color: #fff;
-    font-size: 20px;
-    outline: none;
-    text-align: center;
     transition: all 0.2s ease;
-    cursor: pointer;
 }
 
-.add-btn:hover {
-    background-color: #555;
-
+.loginBtn:hover {
+    transform: translateY(-2px);
 }
 
-footer {
-    background: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.social-icons {
-    display: flex;
-    gap: 20px;
-}
-
-.x,
-.insta,
-.linker {
-    font-size: 24px;
-    cursor: pointer;
+.registerlink a {
+    text-decoration: none;
     color: #555;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
-.x:hover,
-.insta:hover,
-.linker:hover {
+.registerlink a:hover {
     color: #000;
-    transform: scale(1.1);
+
 }
