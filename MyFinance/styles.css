@@ -60,11 +60,11 @@ a::after {
     transition: opacity 0.5s;
 }
 
-a:hover {
+:not(.sign-in):not(.register) a:hover{
     color: #333;
 }
 
-a:hover::after {
+nav ul li:not(.sign-in):not(.register) a:hover::after {
     opacity: 1;
     animation: shimmer111 2s linear infinite !important;
 }
