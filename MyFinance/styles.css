@@ -258,7 +258,7 @@ footer {
     gap: 20px;
 }
 
-.x,
+.github,
 .insta,
 .linker {
     font-size: 24px;
@@ -267,7 +267,7 @@ footer {
     transition: all 0.3s ease;
 }
 
-.x:hover,
+.github:hover,
 .insta:hover,
 .linker:hover {
     color: #000;
