@@ -40,7 +40,7 @@ nav ul {
     align-items: center;
 }
 
-nav ul li a {
+nav ul li:not(.sign-in):not(.register) a {
     text-decoration: none;
     color: #000;
     position: relative;
@@ -60,7 +60,7 @@ a::after {
     transition: opacity 0.5s;
 }
 
-:not(.sign-in):not(.register) a:hover{
+nav ul li:not(.sign-in):not(.register) a:hover {
     color: #333;
 }
 
@@ -79,18 +79,24 @@ nav ul li:not(.sign-in):not(.register) a:hover::after {
     }
 }
 
-.sign-in {
+.sign-in button {
     background: #ddd;
     color: #333;
     padding: 8px 15px;
     border-radius: 6px;
     cursor: pointer;
+    border: none;
     transition: all 0.3s ease;
 }
 
-.register {
+.sign-in a {
+    text-decoration: none;
+    color: #333;
+}
+
+.register button {
     background: #333;
-    color: white;
+    color: #fff;
     padding: 8px 15px;
     border-radius: 6px;
     border: none;
@@ -98,13 +104,18 @@ nav ul li:not(.sign-in):not(.register) a:hover::after {
     transition: all 0.3s ease;
 }
 
-.sign-in:hover {
+.register a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sign-in button:hover {
     background: #ccc;
     color: #000;
     transform: translateY(-2px);
 }
 
-.register:hover {
+.register button:hover {
     background: #555;
     color: #fff;
     transform: translateY(-2px);
