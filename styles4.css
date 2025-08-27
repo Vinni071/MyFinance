@@ -157,7 +157,7 @@ nav ul li:not(.sign-in):not(.register) a:hover::after {
     text-align: center;
     position: relative;
     cursor: pointer;
-    box-shadow: 0 10px 15px -3px rgba(33, 150, 243, .4), 0 4px 6px -4px rgba(33, 150, 243, .4);
+    box-shadow: 0 10px 15px -3px #000, 0 4px 6px -4px #111;
     border-radius: 10px;
     background-color: #6B6ECC;
     background: linear-gradient(45deg, #000 0%, #555 100%);
