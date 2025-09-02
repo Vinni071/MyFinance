@@ -222,7 +222,7 @@ nav ul li:not(.sign-in):not(.register) a:hover::after {
     font-size: 14px;
     outline: none;
     text-align: left;
-    transition: all 0.2s ease;
+    transition: all 0.4s ease;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -231,7 +231,7 @@ nav ul li:not(.sign-in):not(.register) a:hover::after {
 
 .dropdown-btn:hover {
     background-color: #e0e0e0;
-    transform: translateX(5px);
+    padding-bottom: 200px;
 }
 
 .add-btn {
