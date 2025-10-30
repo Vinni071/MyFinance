@@ -1,19 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
-use Laravel\Fortify\Features;
+use App\Http\Controllers\PageController;
 
-Route::get('/', function () {
-    return Inertia::render('welcome', [
-        'canRegister' => Features::enabled(Features::registration()),
-    ]);
-})->name('home');
+// Public routes
+Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/pricing', [PageController::class, 'pricing'])->name('pricing');
 
+// Authentication routes (Laravel Fortify handles these automatically)
+// Just make sure the views are properly named
+
+// Protected routes
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('dashboard', function () {
-        return Inertia::render('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
 });
 
 require __DIR__.'/settings.php';

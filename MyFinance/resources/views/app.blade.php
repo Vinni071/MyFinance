@@ -1,49 +1,55 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" @class(['dark' => ($appearance ?? 'system') == 'dark'])>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="pt-BR">
 
-        {{-- Inline script to detect system dark mode preference and apply it immediately --}}
-        <script>
-            (function() {
-                const appearance = '{{ $appearance ?? "system" }}';
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFinance - @yield('title', 'Home')</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <script src="https://kit.fontawesome.com/94de8cdde8.js" crossorigin="anonymous"></script>
+    @yield('styles')
+</head>
 
-                if (appearance === 'system') {
-                    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+<body>
+    <header>
+        <div class="logo"><a href="{{ route('home') }}">MF</a></div>
+        <nav>
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Comunidade</a></li>
+                <li><a href="#">Recursos</a></li>
+                <li><a href="{{ route('pricing') }}">Preços</a></li>
+                <li><a href="#">Contato</a></li>
+                @guest
+                <li class="sign-in"><a href="{{ route('login') }}"><button>Entrar</button></a></li>
+                <li class="register"><button><a href="{{ route('register') }}">Registrar</a></button></li>
+                @else
+                <li class="user-menu">
+                    <a href="#">{{ Auth::user()->name }}</a>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit">Sair</button>
+                    </form>
+                </li>
+                @endguest
+            </ul>
+        </nav>
+    </header>
 
-                    if (prefersDark) {
-                        document.documentElement.classList.add('dark');
-                    }
-                }
-            })();
-        </script>
+    <main>
+        @yield('content')
+    </main>
 
-        {{-- Inline style to set the HTML background color based on our theme in app.css --}}
-        <style>
-            html {
-                background-color: oklch(1 0 0);
-            }
+    <footer>
+        <div class="social-icons">
+            <div class="github"><i class="fa-brands fa-square-github"></i></div>
+            <div class="insta"><i class="fa-brands fa-square-instagram"></i></div>
+            <div class="linker"><i class="fa-solid fa-link"></i></div>
+        </div>
+    </footer>
 
-            html.dark {
-                background-color: oklch(0.145 0 0);
-            }
-        </style>
+    <script src="{{ asset('js/app.js') }}"></script>
+    @yield('scripts')
+</body>
 
-        <title inertia>{{ config('app.name', 'Laravel') }}</title>
-
-        <link rel="icon" href="/favicon.ico" sizes="any">
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-
-        @viteReactRefresh
-        @vite(['resources/js/app.tsx', "resources/js/pages/{$page['component']}.tsx"])
-        @inertiaHead
-    </head>
-    <body class="font-sans antialiased">
-        @inertia
-    </body>
 </html>
