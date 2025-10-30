@@ -26,10 +26,17 @@ header {
     color: #333;
     cursor: pointer;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo img {
+    height: 40px;
+    width: 40px;
+    transition: all 0.3s ease;
 }
 
 .logo:hover {
-    transform: translateY(-2px);
+    transform: scale(1.1);
     transition: all 0.3s ease;
 }
 

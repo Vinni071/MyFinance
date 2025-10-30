@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <div class="logo"><a href="{{ route('home') }}">MF</a></div>
+        <div class="logo"><a href="{{ route('home') }}"><img src="{{ asset('img/logo.png')}}" alt=""></a></div>
         <nav>
             <ul>
                 <li><a href="#">Sobre</a></li>
@@ -42,7 +42,7 @@
 
     <footer>
         <div class="social-icons">
-            <div class="github"><i class="fa-brands fa-square-github"></i></div>
+            <div class="github"><a href="https://github.com/Vinni071"><i class="fa-brands fa-square-github"></i></a></div>
             <div class="insta"><i class="fa-brands fa-square-instagram"></i></div>
             <div class="linker"><i class="fa-solid fa-link"></i></div>
         </div>
