@@ -31,6 +31,12 @@ class FortifyServiceProvider extends ServiceProvider
         $this->configureActions();
         $this->configureViews();
         $this->configureRateLimiting();
+        Fortify::registerView(function () {
+            return view('auth.register');
+        });
+        Fortify::loginView(function () {
+            return view('auth.login');
+        });
     }
 
     /**

@@ -35,23 +35,5 @@ class PageController extends Controller
     {
         return view('dashboard');
     }
-
-    /**
-     * Display the profile page.
-     *
-     * @return \Illuminate\View\View
-     */
-    public function login()
-    {
-        return view('login');}
     
-    /**
-     * Display the register page.
-     *
-     * @return \Illuminate\View\View
-     */
-    public function register()
-    {
-        return view('register');
-    }
 }
