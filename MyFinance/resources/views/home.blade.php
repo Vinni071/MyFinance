@@ -19,7 +19,7 @@
         <div class="dropdown">
             
         </div>
-        <button class="add-btn">+</button>
+        <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
     </div>
 </section>
 @endsection

@@ -103,7 +103,7 @@ a:hover::after {
 
 .card {
     width: 100%;
-    max-width: 450px;
+    max-width: 380px;
     background: white;
     padding: 20px;
     border-radius: 15px;
