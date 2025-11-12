@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Inertia\Inertia;
+use Inertia\Response;
 
 class PageController extends Controller
 {
@@ -31,9 +32,8 @@ class PageController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function dashboard()
+    public function dashboard(): Response
     {
-        return view('dashboard');
+        return Inertia::render('dashboard');
     }
-    
 }

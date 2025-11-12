@@ -12,7 +12,7 @@ Route::get('/pricing', [PageController::class, 'pricing'])->name('pricing');
 
 // Protected routes
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/home', [PageController::class, 'home'])->name('home');
+    Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
 });
 
 require __DIR__.'/settings.php';
